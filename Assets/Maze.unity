@@ -299,6 +299,7 @@ MonoBehaviour:
   player: {fileID: 1065657816}
   enemy: {fileID: 1336402421}
   endPanel: {fileID: 1299803518}
+  ghostToggle: {fileID: 892381020}
 --- !u!4 &389252478
 Transform:
   m_ObjectHideFlags: 0
@@ -586,7 +587,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0, g: 0.754716, b: 0.9044118, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -628,7 +629,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &892381019
 RectTransform:
   m_ObjectHideFlags: 0
@@ -882,7 +883,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4512831101684396, guid: fe4a180a3ede47d43829e283db90f426, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.58
       objectReference: {fileID: 0}
     - target: {fileID: 4512831101684396, guid: fe4a180a3ede47d43829e283db90f426, type: 2}
       propertyPath: m_LocalPosition.z
@@ -937,6 +938,21 @@ Prefab:
       propertyPath: m_UseGravity
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 143511503232859604, guid: fe4a180a3ede47d43829e283db90f426,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 54070688710995310, guid: fe4a180a3ede47d43829e283db90f426,
+        type: 2}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 136746610432548144, guid: fe4a180a3ede47d43829e283db90f426,
+        type: 2}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fe4a180a3ede47d43829e283db90f426, type: 2}
   m_IsPrefabParent: 0
@@ -955,7 +971,6 @@ GameObject:
   - component: {fileID: 1065657819}
   - component: {fileID: 1065657818}
   - component: {fileID: 1065657817}
-  - component: {fileID: 1065657824}
   m_Layer: 0
   m_Name: PlayerBady
   m_TagString: Player
@@ -1074,29 +1089,13 @@ Transform:
   m_PrefabInternal: {fileID: 994630215}
   m_GameObject: {fileID: 1065657816}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.5, y: 0, z: -9.5}
+  m_LocalPosition: {x: 9.5, y: 0.58, z: -9.5}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 2036470170}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1065657824
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1065657816}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49070382393a43e4f8b90f3ffa7e321e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  northWall: {fileID: 1633006015293934, guid: 677c7ea714629d3428de597d1c266f92, type: 2}
-  eastWall: {fileID: 1379867243401248, guid: 4e5bbcd7b1158c542944426958a56fe1, type: 2}
-  southWall: {fileID: 1650123947107292, guid: 0a9b5c39c547b5746bd0ca620cb3704e, type: 2}
-  westWall: {fileID: 1561973824836388, guid: c96458535f002734bbcdd479057cd42a, type: 2}
-  ghostToggle: {fileID: 892381020}
 --- !u!1 &1119396735
 GameObject:
   m_ObjectHideFlags: 0
@@ -1869,6 +1868,11 @@ Prefab:
       propertyPath: survivalTimeText
       value: 
       objectReference: {fileID: 1251316364}
+    - target: {fileID: 114405864826383576, guid: b9863b6843ae89b4d94b01f355bafc88,
+        type: 2}
+      propertyPath: ghostToggle
+      value: 
+      objectReference: {fileID: 892381020}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9863b6843ae89b4d94b01f355bafc88, type: 2}
   m_IsPrefabParent: 0
@@ -2023,13 +2027,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1608691363}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 18, z: 0}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 9.74, y: 0.1, z: -7.99}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &1679407268
 GameObject:
   m_ObjectHideFlags: 0
@@ -2187,6 +2191,7 @@ GameObject:
   - component: {fileID: 2036470171}
   - component: {fileID: 2036470177}
   - component: {fileID: 2036470176}
+  - component: {fileID: 2036470178}
   m_Layer: 0
   m_Name: PlayerEyes
   m_TagString: Untagged
@@ -2291,10 +2296,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2036470169}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 242df52f7c418b24b9a1acfd26edca25, type: 3}
+  m_Script: {fileID: 11500000, guid: ad143a3e988b5e4498c2c0013a2ba314, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   fogToggle: {fileID: 986496212}
+  brightToggle: {fileID: 2042364590}
+  ghostToggle: {fileID: 892381020}
 --- !u!114 &2036470177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2315,6 +2322,21 @@ MonoBehaviour:
   fogXSpeed: -0.05
   fogYSpeed: 0.05
   noiseAmount: 1
+--- !u!114 &2036470178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2036470169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 732ea7b8e0e25d443b6cf66caea84dc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  briSatConShader: {fileID: 4800000, guid: 9d3de3261d0577c4499ea69f7b189276, type: 3}
+  brightness: 0.5
+  saturation: 1.081
+  contrast: 1.079
 --- !u!1 &2042364588
 GameObject:
   m_ObjectHideFlags: 0
@@ -2330,7 +2352,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2042364589
 RectTransform:
   m_ObjectHideFlags: 0

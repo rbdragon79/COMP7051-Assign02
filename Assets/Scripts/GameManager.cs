@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour {
     public GameObject player;
     public GameObject enemy;
     public GameObject endPanel;
+    public Toggle ghostToggle;
     private static bool gameEnd = false;
     
 
@@ -40,6 +41,7 @@ public class GameManager : MonoBehaviour {
         gameEnd = false;
         thisMaze = Instantiate(maze) as Maze;
         thisMaze.GenerateMaze();
+        ghostToggle.isOn = false;
         player.transform.position = new Vector3(9.5f, 0, -9.5f);
         enemy.transform.position = new Vector3(-7.5f, 0, 7.5f);
         timer = 0;

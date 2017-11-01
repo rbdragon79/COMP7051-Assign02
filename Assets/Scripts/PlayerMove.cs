@@ -5,11 +5,13 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
     CharacterController CharacterController;
+    //Rigidbody rigidBody;
     public float walk_Speed = 1.0f;
     public float turn_Speed = 100.0f;
     void Awake()
     {
         CharacterController = GetComponent<CharacterController>();
+        //rigidBody = GetComponent<Rigidbody>();
     }
     // Update is called once per frame
     void Update()
@@ -20,6 +22,7 @@ public class PlayerMove : MonoBehaviour
         float vertical = Input.GetAxis("Vertical");
         Vector3 moveForward = transform.forward * vertical * walk_Speed;
         CharacterController.SimpleMove(moveForward);
+        //rigidBody.MovePosition(moveForward);
 
         //float horizontal = Input.GetAxis("Horizontal");
         //Vector3 moveSide = transform.forward * horizontal * walk_Speed;
