@@ -10,6 +10,7 @@ public class ToggleManager : MonoBehaviour {
     Brightness brightness;
     public Toggle brightToggle;
     public Toggle ghostToggle;
+    public Light sun;
 
     // Use this for initialization
     void Start () {
@@ -19,19 +20,21 @@ public class ToggleManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.F) || /*Input.GetButton("FogToggle")*/ Input.GetKeyDown("joystick button 2"))
+        if (Input.GetKeyDown(KeyCode.F) ||  Input.GetKeyDown("joystick button 2"))
         {
             fogToggle.isOn = !fogToggle.isOn;
             noiseFog.enabled = !noiseFog.enabled;
+
         }
 
-        if(Input.GetKeyDown(KeyCode.N) || /*Input.GetButton("NightToggle")*/ Input.GetKeyDown("joystick button 1"))
+        if(Input.GetKeyDown(KeyCode.N) ||  Input.GetKeyDown("joystick button 1"))
         {
             brightToggle.isOn = !brightToggle.isOn;
             brightness.enabled = !brightness.enabled;
+            sun.enabled = !sun.enabled;
         }
 
-        if (Input.GetKeyDown(KeyCode.W) || /*Input.GetButton("GhostToggle")*/ Input.GetKeyDown("joystick button 3"))
+        if (Input.GetKeyDown(KeyCode.W) ||  Input.GetKeyDown("joystick button 3"))
         {
             ghostToggle.isOn = !ghostToggle.isOn;
 

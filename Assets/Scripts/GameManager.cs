@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour {
     public GameObject endPanel;
     public Toggle ghostToggle;
     private static bool gameEnd = false;
+    public Light sun;
     
 
     // Use this for initialization
@@ -23,6 +24,7 @@ public class GameManager : MonoBehaviour {
         timer = 0;
         endPanel = GameObject.FindGameObjectWithTag("Finish");
         endPanel.SetActive(false);
+        sun.enabled = !sun.enabled;
         BeginGame();
     }
 
@@ -30,7 +32,7 @@ public class GameManager : MonoBehaviour {
     private void Update()
     {
         timerText.text = timer.ToString();
-        if (Input.GetKeyDown(KeyCode.Home) || Input.GetButton("Restart") /*|| Input.touches[0].tapCount == 2*/)
+        if (Input.GetKeyDown(KeyCode.Home) || Input.GetKeyDown("joystick button 7"))
         {
             RestartGame();
         }
