@@ -13,11 +13,13 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2017.1.1f1</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -79,7 +81,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\EnemyMove.cs" />
+    <Compile Include="Assets\Scripts\FogToggle.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\GhostToggle.cs" />
     <Compile Include="Assets\Scripts\IntVector2.cs" />
     <Compile Include="Assets\Scripts\Maze.cs" />
     <Compile Include="Assets\Scripts\MazeCell.cs" />
@@ -90,12 +94,15 @@
     <Compile Include="Assets\Scripts\MazeHall.cs" />
     <Compile Include="Assets\Scripts\MazeRoom.cs" />
     <Compile Include="Assets\Scripts\MazeWall.cs" />
+    <Compile Include="Assets\Scripts\NoiseFog.cs" />
     <Compile Include="Assets\Scripts\PlayerEyes.cs" />
     <Compile Include="Assets\Scripts\PlayerMove.cs" />
+    <Compile Include="Assets\Scripts\PostEffectsBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Readme.txt" />
     <None Include="Assets\Robo3\Animations\Robo3 animations list.txt" />
+    <None Include="Assets\Scripts\NoiseFog.shader" />
     <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonBasic.shader" />
     <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonBasicOutline.shader" />
   </ItemGroup>
